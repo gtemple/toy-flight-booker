@@ -17,3 +17,12 @@ Airport.create(airport_code: 'LHR', airport_name: 'Heathrow Airport', airport_ci
 Airport.create(airport_code: 'BCN', airport_name: 'Josep Tarradellas Barcelona-El Prat Airport', airport_city: 'Barcelona' )
 Airport.create(airport_code: 'HND', airport_name: 'Haneda Airport', airport_city: 'Tokyo')
 Airport.create(airport_code: 'SYD', airport_name: 'Sydney Airport', airport_city: 'Sydney')
+
+"2020-10-20 15:10:57"
+
+Flight.create(departure_airport_id: 1, arrival_airport_id: 2, flight_code: 'AC851', departure_date: "2020-11-20 15:10:00", arrival_date: "2020-11-20 16:45:00", airline: 'Air Canada')
+Flight.create(departure_airport_id: 2, arrival_airport_id: 1, flight_code: 'AC 651', departure_date: "2020-11-20 12:22:00", arrival_date: "2020-11-20 13:57:00", airline: 'Air Canada')
+Flight.create(departure_airport_id: 3, arrival_airport_id: 10, flight_code: "AM 400", departure_date: "2020-11-20 15:40:00", arrival_date: "2020-11-21 18:30:00", airline: 'American Airlines')
+Flight.create(departure_airport_id: 10, arrival_airport_id: 3, flight_code: 'AM 200', departure_date: "2020-11-20 14:15:00", arrival_date: "2020-11-20 10:05:00", airline: 'American Airlines')
+Flight.create(departure_airport_id: 8, arrival_airport_id: 9, flight_code: 'BR 656', departure_date: "2020-11-20 12:10:00", arrival_date: "2020-11-20 15:20:00", airline: 'British Airways')
+Flight.create(departure_airport_id: 9, arrival_airport_id: 8, flight_code: 'BR 756', departure_date: "2020-11-20 17:10:00", arrival_date: "2020-11-20 18:20:00", airline: 'British Airways')

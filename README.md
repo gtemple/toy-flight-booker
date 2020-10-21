@@ -9,3 +9,5 @@
 4. Created associations between models
 
 5. Built flights#index view/form and built out corresponding controller action
+
+6. Created 6 flights for the database and reseeded
