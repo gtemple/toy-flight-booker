@@ -1,0 +1,25 @@
+<% if @flights.exists? %>
+  <table>
+    <tr>
+      <th>Airline
+      <th>Departure Airport</th>
+      <th>Arrival Airport</th>
+      <th>Date</th>
+      <th>Leaving At</th>
+      <th>Arriving At</th>
+    </tr>
+
+    <% @flights.each do |f| %>
+      <tr>
+        <th><%= f.airline%></th>
+        <th><%= f.departure_airport.airport_name + ' ' + f.departure_airport.airport_code%></th>
+        <th><%= f.arrival_airport.airport_name + ' ' + f.arrival_airport.airport_code%></th>
+        <th><%= f.departure_date %></th>
+        <th><%= f.departure_time %></th>
+        <th><%= f.arrival_time %></th>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>We're sorry, we don't have any flights including these locations on this date. Please try again</p>
+  <% end %>

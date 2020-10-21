@@ -1,22 +1,14 @@
 <p><strong>Site developer's note</strong></p>
 
-<p>The current build of this website is only offering 6 flights, all on NOBEMBER 11th, 2020:</p>
-<ul>
+<p>The current build of this website is only offering 6 flights on 2 dates</p>
+<ul> November 20th,2020
   <li> Toronto to NYC // NYC to Toronto </li>
   <li> Los Angeles to Tokyo // Tokyo to Los Angeles </li>
+</ul>
+<ul> November 21st, 2020
   <li> London to Barcelona // Barcelona to London </li>
 </ul>
 
 
-
-<%= form_with(url: '/flights', method: 'get', local: true) do %>
-
-  <%= label_tag(:departure_airport_id, 'Departure:') %>
-  <%= select_tag(:airport_id, options_for_select(@airport_options)) %>
-  <br><br>
-  <%= label_tag(:arrival_airport_id, 'Destination:') %>
-  <%= select_tag(:airport_id, options_for_select(@airport_options)) %>
-  <br><br>
-  <%= submit_tag('Search') %>
-
-<% end %>
+<%= render 'searchform' %>
+<%= render 'selectform'%>
