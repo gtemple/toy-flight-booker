@@ -1,0 +1,11 @@
+<%= form_with(url: '/flights', method: 'get', local: true) do %>
+
+  <%= label_tag(:departure_airport_id, 'Departure:') %>
+  <%= select_tag(:airport_id, options_for_select(@airport_options)) %>
+  <br><br>
+  <%= label_tag(:arrival_airport_id, 'Destination:') %>
+  <%= select_tag(:airport_id, options_for_select(@airport_options)) %>
+  <br><br>
+  <%= submit_tag('Search') %>
+
+<% end %>
