@@ -1,16 +1,18 @@
 <% if @flights.exists? %>
   <table>
     <tr>
-      <th>Airline
+      <th>Select</th>
+      <th>Airline</th>
       <th>Departure Airport</th>
       <th>Arrival Airport</th>
       <th>Date</th>
       <th>Leaving At</th>
       <th>Arriving At</th>
     </tr>
-
+   <%= form_with(url: '/bookings/new', method: 'get', local: true) do %>
     <% @flights.each do |f| %>
       <tr>
+        <th><%= radio_button_tag(:flight_id, f.id) %></th>
         <th><%= f.airline%></th>
         <th><%= f.departure_airport.airport_name + ' ' + f.departure_airport.airport_code%></th>
         <th><%= f.arrival_airport.airport_name + ' ' + f.arrival_airport.airport_code%></th>
@@ -19,7 +21,8 @@
         <th><%= f.arrival_time %></th>
       </tr>
     <% end %>
+    <%= submit_tag('Book now') %>
   </table>
 <% else %>
-  <p>We're sorry, we don't have any flights including these locations on this date. Please try again</p>
+  <p>We're sorry, we don't have any flights including these locations on this date. Please try again.</p>
   <% end %>
