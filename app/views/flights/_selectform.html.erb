@@ -21,8 +21,10 @@
         <th><%= f.arrival_time %></th>
       </tr>
     <% end %>
+    </table>
     <%= submit_tag('Book now') %>
-  </table>
+  <% end %>
+  
 <% else %>
   <p>We're sorry, we don't have any flights including these locations on this date. Please try again.</p>
   <% end %>
